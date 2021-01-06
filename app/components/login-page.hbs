@@ -1,0 +1,12 @@
+ <div class="backButton" {{on "click" this.back     }} title="back"></div>
+    <div class='logo' ></div>
+     <div class="loginMainBox">
+             <div class="Logindetials"> Email Id
+                <Input type="text" @value={{emailId}} class="LoginInputBox" placeholder="Email or UserId"/>
+                </div>
+            <div class="Logindetials"> password
+                <Input type="password" @value={{password}} class="LoginInputBox" placeholder="Password"/>    
+            </div>
+            <div class="loginPage-Botton" {{on "click" login}}>Login</div>
+     </div>
+{{yield}}

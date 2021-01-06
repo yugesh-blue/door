@@ -1,0 +1,7 @@
+   <Textarea @value={{val}}  name="post" cols="80" rows="4" placeholder="type here to \post"></Textarea>
+<div class="selection">
+    <LinkTo @route="notification" class="OkButton" {{on "click" this.post}}>Ok</LinkTo>
+      <LinkTo @route="homePage" class="OkButton" >Cancel</LinkTo>
+</div>
+
+{{yield }}
