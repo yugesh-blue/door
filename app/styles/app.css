@@ -3,7 +3,7 @@
 body{
     background-color: rgb(92,142,224);
 }
-.login-full-page,.mainDiv,.AdminmainDiv,.mainMessageDiv{
+.index-full-page,.login-full-page,.mainDiv,.AdminmainDiv,.mainMessageDiv{
     width: 100%;
     height:900px;
     margin:auto ;   
@@ -17,6 +17,10 @@ body{
     
   
 }
+.login-full-page{
+    display: flex;
+    flex-direction: row;
+}
 .login-button{
     padding: 10px 30px 10px;
     text-decoration: none;
@@ -25,6 +29,7 @@ body{
    text-align: center;
     font-weight: bold;
     font-size: 25px;
+    margin-top: -30px;
     margin: auto;
     border-radius: 5px;
     box-shadow: 10px 10px 10px;
@@ -35,7 +40,7 @@ body{
 
 }
 
-/* register pages style ..................*/
+                                    /* register pages style ..................*/
 
 .register-button,.MesageOk{
     padding: 10px 30px 10px;
@@ -75,9 +80,9 @@ body{
    font-family: 'Open Sans', sans-serif;
 }
 .MainBox{
-    border: 1px solid black;
+   
     width:50%;
-    height: 950px;
+    height: 965px;
     }
     
 .box2{
@@ -92,7 +97,7 @@ body{
     background-repeat: no-repeat;
     margin-top: 100px;
 }
-.logo,.Register-logo{
+.logo,.Register-logo,.login-logo{
     width: 200px;
     height: 200px;
     margin:auto;
@@ -133,6 +138,95 @@ td{
 .register-button{
   margin-left: -80px;
 }
+                                    /* login page style................... */
+.login-logo{
+    width: 300px;
+    margin-top: 200px;
+    
+}
+.login-box1 > p{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.Main-selectBox{
+    width:100%;
+    height:50px; 
+    margin: auto;
+    display: flex;
+    flex-direction: row ;
+    margin-top: 200px;
+}
+.selectBox{
+    
+    border-radius: 10px 10px 0px 0px;
+    padding-top: 15px;
+    background-color: rgb(214, 203, 203);
+    width: 200px;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: row; 
+    cursor: pointer;
+}
+.selectBox:active{
+    transform: scale(0.9);
+}
+.select-Box1{
+    margin-left: 180px;
+   
+}
+.changecolor1{
+    background-color: rgb(92,142,224);
+}
+.changecolor0{
+    background-color: white ;
+}
+.AdminImage{
+    width:70px;
+    height:70px;
+    margin-top: -15px;
+    background-image: url(../image/adminImage2.png);
+    background-size: contain;
+    
+}
+.select-Box2 >.text{
+    color: gray;
+}
+
+.change-AdminImage1{
+    background-image: url(../image/adminImage1.png);
+}
+.change-AdminImage0{
+    background-image: url(../image/adminImage2.png);
+}
+
+.userImage{
+    width:70px;
+    height:70px;
+    margin-top: -15px;
+    background-image: url(../image/userImage2.png);
+    background-size: contain;
+}
+.change-UserImage1{
+    background-image: url(../image/userImage1.png);
+
+}
+.change-UserImage0{
+    background-image: url(../image/userImage2.png);
+
+}
+.selectBox > .text1{
+    color: black;
+}
+.selectBox > .text0{
+    color: gray;
+}
+                                                /* post box style ......................... */
 .mainPostBox{
   
     width: 700px;
@@ -266,42 +360,52 @@ td{
 }
 
 .loginMainBox{
-        border: 1px solid black;
-        width:600px;
+        width:644px;
         height: 300px;
         margin: auto;
-        background: #016aba;
+        background-color: rgb(92,142,224);
+        margin-top: 20px;
+        margin-left: 180px;
+        border-radius: 0px 0px 20px 20px;
 }
 .Logindetials{
   
     padding-top:50px ;
-    font-size: 25px;
+    font-size: 30px;
     padding-left:20px;
     color:white;
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
+
 }
 .LoginInputBox{
     margin-left: 60px;
     font-size: 25px;    
     text-align: center;
-    background: #016aba;
-   color: white;
+    color: black ;
+ 
     
 }
 .LoginInputBox::placeholder { 
-    color:rgb(216, 215, 215);
+    color:black;
     opacity: 1;
   }
 .loginPage-Botton{
-    border: 1px solid black;
+    padding-top: 5px;
     width:200px;
     height:50px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 40px;
     background-color: white;
     border-radius: 20px;
     font-size: 30px;
     cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+
+}
+.loginPage-Botton:active{
+    transform: scale(0.9);
 }
 .UserId{
     border: 1px solid black;
