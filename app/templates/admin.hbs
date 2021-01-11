@@ -1,25 +1,7 @@
-
-<div class="AdminmainDiv">
-    <div class="userProfile ">
-        <div class="profileImage"></div>
-        <div class="profileName"> Admin User</div>
-         <LinkTo @route="index" class="logout-button" >Logout</LinkTo>
-</div>
-    <PostPage @title={{@model}}></PostPage>
-  <div class="usersProfiles">
-    <div class="heading"><div>All user names and profiles</div>
-    {{!-- <div class="addUser" {{on "click" addUser}}>+ Add</div> --}}
-    <LinkTo @route="register" class="addUser"  >+Add</LinkTo>
-
-    </div>
-   
-     {{#each @model.userDatas as |mess|}}
-      <div class="UserId">{{mess.UserId}}</div>
-      {{/each}}
-
-</div>  
+<div class="mainDiv">
+    
+   <PostPage @title={{@model}}></PostPage>
 </div>
 
-  
  {{outlet}} 
   

@@ -1,13 +1,25 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
-
+import { tracked } from '@glimmer/tracking';
 
 export default class PostPageComponent extends Component {
+   
     current=JSON.parse(localStorage.getItem("currentUser"))
-    Datas=JSON.parse(localStorage.getItem("DoorUserPost"))
+    @tracked Datas=JSON.parse(localStorage.getItem("DoorUserPost"))
     @service router;
-    
+
+   @tracked optionBox="No"
+
+   @action
+   optionHomePageClick(){
+       if(this.optionBox=="Yes"){
+        this.optionBox="No"
+       }
+       else{
+        this.optionBox="Yes"
+       }
+   }
      @action
         post(){
            console.log(this.Datas,this.current)
@@ -60,7 +72,7 @@ export default class PostPageComponent extends Component {
                         localStorage.setItem("DoorUserPost",JSON.stringify(localStorages));
                         localStorage.setItem("notification",JSON.stringify("you deleted a post"));
 
-                        this.router.transitionTo("notification");
+                      //  this.router.transitionTo("notification");
                     }
                 }
                 
@@ -112,7 +124,7 @@ export default class PostPageComponent extends Component {
        // console.log("nooo")
     }
   }
-  @action
+  @action  
   deletecomment(){
     //console.log(event.target.id.split("c")[0]);
     var id=event.target.id.split("t")[1]

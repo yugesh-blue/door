@@ -1,3 +1,24 @@
+ <div class="userProfile">
+        <div class='logo-Text'>Door</div>
+         <div class="profileImage" {{on "click" this.optionHomePageClick}}></div>
+        <div class="profileName"> {{@title.current}}</div>
+        <div class="option-HomePage-full optionBox-{{this.optionBox}}">
+            <div  class="optionFocus-HomePage"></div>
+            <div class="option-HomePage">
+                    <div  class="option-HomePage-Box">Profile</div>
+                    <div  class="option-HomePage-Box">
+                        <LinkTo @route="index"class="button-HomePage-Box" >Log Out</LinkTo>
+                    </div>
+                    
+
+                 </div>
+            
+       
+        </div>
+        
+
+       
+</div>
  <div class="mainPostBox">
      <div class='CreatePost'>
 <Textarea @value={{textArea}} name="post" cols="80" rows="4" placeholder="type here to post"/>
@@ -8,8 +29,6 @@
      {{#each @title.post as |mess|}}
     
         <div class="postBox" >
-                
-            
            <div class="profile">{{mess.UserId}}
                {{#if (homepage-if this.current mess.UserId) }}
                <div class="editButton"id="edit+{{mess.id}}" {{on "click" this.edit}} disabled>Edit</div>

@@ -1,12 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);
-body{
-    background-color: rgb(92,142,224);
-}
+
 .index-full-page,.login-full-page,.mainDiv,.AdminmainDiv,.mainMessageDiv{
     width: 100%;
-    height:900px;
-    margin:auto ;   
+    height:960px;
+    margin:auto ;  
+    background-color: rgb(92,142,224); 
     text-align: center;
     /* background-color: rgb(92,142,224); */
     /* background-image:url(../image/background.jpeg) ; */
@@ -17,9 +16,13 @@ body{
     
   
 }
+.mainDiv{
+    background-color: white;
+}
 .login-full-page{
     display: flex;
     flex-direction: row;
+    background-color: rgb(92,142,224);
 }
 .login-button{
     padding: 10px 30px 10px;
@@ -67,13 +70,14 @@ body{
     background-color: #d4fbff;
 }
 .register-fill-page{
-    border:1px solid black;
+    
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 100%;
     margin: auto;
     text-align: center;
+    background-color: rgb(92,142,224);
 }
 .box1 > p{
    font-size: 40px;
@@ -232,16 +236,13 @@ td{
     width: 700px;
     height: 900px;
     margin: auto;
-    overflow: scroll;
-    /* overflow-y: hidden;  */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 .postBox{
    
     width: 700px;
    border-bottom: 1px solid rgb(119, 113, 113);
     margin-bottom: 25px;
-    box-shadow: 2   px 2px 5px;
+    box-shadow: 2px 2px 5px;
 }
 .postTextArea{
     word-wrap: break-word;
@@ -278,11 +279,13 @@ td{
 
 }
 .userProfile{
-    width: 400px;
+    width: 100%;
     height:100px;
     position: absolute;
     display: flex; 
-    background-color: #353749; 
+    background-color: rgb(92,142,224);  
+    position: fixed; 
+   
 }
 .profileImage{
     /* border: 1px solid red; */
@@ -292,24 +295,84 @@ td{
     background-size: contain;
     background-repeat: no-repeat;
     margin-top: 20px;
+    margin-left: 60%;
+    border-radius: 20px;
+    cursor: pointer;
     
 }
-.profileName{
-    /* border: 1px solid red; */
-    width: 60%;
-    height:10px;
+
+.profileName,.logo-Text{
+     /* border: 1px solid red;  */
     text-align:left;
      padding: 15px;
-     margin-top: 20px;
-   font-size: 20px;
+     margin-top: 10px; 
+     font-size: 25px;
     color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
     
+}
+.option-HomePage-full{
+    width: 160px;
+    height:105px;
+    top: 85px;
+    left:-150px;
+    position: relative;
+    background-color: white;
+    box-shadow: 1px 2px 5px 1px rgba(59, 59, 59, 0.77);
+
+    
+}
+.option-HomePage-Box,.button-HomePage-Box{
+    border-bottom: 1px solid rgb(206, 204, 204); 
+    text-decoration: none;
+    color:rgb(70, 67, 67);
+    width: 160px;
+    height:40px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+  
+}
+.optionFocus-HomePage{
+    /* border: 1px solid rgb(149, 2, 2);  */
+    width: 20px;
+    height:20px;
+    margin-top: -8px;
+    margin-left: 25px;
+    transform: rotate(45deg);
+    background-color: white;
+
+
+}
+
+.option-HomePage{
+    /* border: 1px solid black;*/
+    
+}
+.optionBox-Yes{
+    transform: scale(1);
+
+}
+.optionBox-No{
+    transform: scale(0);
+}
+.logo-Text{
+    height: 25px;
+    margin-left: 2%;
+    border-radius: 20px;
+    background-color: white;
+    margin-top: 25px;
+    color: rgb(92,142,224);
+    padding:5px 5px 15px 5px;
+    font-weight: bolder;
 }
 
 .editButton,.deleteButton,.postDeleteButton{
     margin-top: 5px;
     width:60px;
-    font-size: 20px;
+    font-size: 25px;
    margin-left: 600px;
    background-color:rgb(255, 107, 96);
    cursor: pointer;
