@@ -1,10 +1,18 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
+import { tracked } from '@glimmer/tracking';
 
 export default class LoginPageComponent extends Component {
     @service router;
-
+    @tracked user="1"
+    @tracked Admin="0"
+    @tracked num=0;
+    @tracked currentUser="User"
+    @action
+    addnum(){
+        this.num=this.num+1;
+    }
     @action
     login(){
         console.log("jii");
@@ -12,7 +20,7 @@ export default class LoginPageComponent extends Component {
         console.log(this.emailId);
         var localStorageUserData=JSON.parse(localStorage.getItem("DoorUserDatas"))
         if(localStorageUserData!=null){
-        if(this.emailId=="Admin" && this.password=="Admin"){
+        if(this.emailId=="Admin" && this.password=="Admin" && this.currentUser=="Admin" ){
             this.router.transitionTo("admin")
             localStorage.setItem("currentUser",JSON.stringify(this.emailId))
         }
@@ -31,7 +39,7 @@ export default class LoginPageComponent extends Component {
                     console.log("youe pass is incorrect")
                    
                 }
-            }
+            }   
           
             
         }
@@ -41,6 +49,19 @@ export default class LoginPageComponent extends Component {
     }
     @action
     back(){
-        this.router.transitionTo("index")
+        this.router.transitionTo("index");
+    }
+    @action
+    onChangeColor(a){
+        console.log(a);
+        this.currentUser=a
+        if(a=="User"){
+            this.user="1";
+            this.Admin="0";
+        }
+        else{
+            this.user="0";
+            this.Admin="1";
+        }
     }
 }
