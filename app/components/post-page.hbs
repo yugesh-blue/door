@@ -1,3 +1,10 @@
+<div class="optionComponent-{{this.optionMore}}">
+    <div class="options-post">
+        <div class="MoreOption-boxes" style="color: rgb(92,142,224);" {{on "click" this.edit}}>Edit</div>
+        <div class="MoreOption-boxes" style="color: rgb(92,142,224);" {{on "click" this.delete   }}>Delete</div>
+        <div class="MoreOption-boxes" {{on "click" this.more}}>Cancel</div>
+    </div>
+</div>
  <div class="userProfile">
         <div class='logo-Text'>Door</div>
          <div class="profileImage" {{on "click" this.optionHomePageClick}}></div>
@@ -10,7 +17,6 @@
                         <LinkTo @route="index"class="button-HomePage-Box" >Log Out</LinkTo>
                     </div>
                     
-
                  </div>
             
        
@@ -21,32 +27,41 @@
 </div>
  <div class="mainPostBox">
      <div class='CreatePost'>
-<Textarea @value={{textArea}} name="post" cols="80" rows="4" placeholder="type here to post"/>
-           <div  {{on "click" this.post     }} class="login-button"  >SUBMIT</div>
+<Textarea @value={{textArea}} name="post" cols="80" rows="4" placeholder="Type here to post"/>
+           <div  {{on "click" this.post}} class="Submit-HomePage"  >SUBMIT</div>
            
     </div> 
     
      {{#each @title.post as |mess|}}
     
         <div class="postBox" >
-           <div class="profile">{{mess.UserId}}
-               {{#if (homepage-if this.current mess.UserId) }}
-               <div class="editButton"id="edit+{{mess.id}}" {{on "click" this.edit}} disabled>Edit</div>
-               <div class="deleteButton"id="{{mess.id}}" {{on "click" this.delete   }}>Delete</div>
-                {{/if}}
+           
+           <div class="profile">
+                <div class="profileImage-post">
+                    <img src="../image/profile.jpg" class="post-Image">
+                </div>
+             <div class="profileNames"> {{mess.UserId}}</div> 
+                {{#if (homepage-if this.current mess.UserId) }}
+                {{!-- <div class="editButton"id="edit+{{mess.id}}" {{on "click" this.edit}} disabled>Edit</div>
+                <div class="deleteButton"id="{{mess.id}}" {{on "click" this.delete   }}>Delete</div> --}}
+                   <div class="optionMore" id="more{{mess.id}}" title="More" {{on "click" this.more}}>...</div>          
+                    {{/if}}
+                
            </div>
+
           
             <div class="postContant">
            {{{mess.UserPost}}}
             </div>
+            {{!-- <div class="likesBox">
+                    <div class="like-image {{this.likeButton}} like-post" {{on "click" this.likeToggle}} ></div>
+            </div> --}}
             <div class="commentBox">
-                                <div class="commentHeading">Comment</div>
-                               <Input type="text" @value={{comment}} class="commentInputBox" placeholder="comment"/>    
+                               <Input type="text" @value={{comment}} class="commentInputBox" placeholder="Comment"/>    
                                <div class="CommentPostButton"  id="post{{mess.id}}" {{on "click" this.CommentPost   }}>Post</div>
-                                <div class="commentHeading"> All Comments</div>
+                                <div class="commentHeading"> </div>
                                    {{#each mess.PostComment as |messs|}}
                                 <div class="Comments">
-                                   
                                     <div class="userId-Comments">{{messs.name}}</div>
                                     <div class="commentDeleteButton" id="{{messs.mainId}}comment{{messs.id}}" {{on "click" this.deletecomment  }}>x</div>
                                     <div class="Commentposts">{{messs.commentPost}}</div>

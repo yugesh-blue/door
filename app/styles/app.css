@@ -24,7 +24,7 @@
     flex-direction: row;
     background-color: rgb(92,142,224);
 }
-.login-button{
+.login-button,.Submit-HomePage{
     padding: 10px 30px 10px;
     text-decoration: none;
     background:white;
@@ -232,31 +232,36 @@ td{
 }
                                                 /* post box style ......................... */
 .mainPostBox{
-  
     width: 700px;
     height: 900px;
     margin: auto;
 }
 .postBox{
-   
     width: 700px;
    border-bottom: 1px solid rgb(119, 113, 113);
-    margin-bottom: 25px;
-    box-shadow: 2px 2px 5px;
+    margin-bottom: 80px;
+    box-shadow: -2px 2px 23px -2px rgba(105,98,98,0.83);
 }
 .postTextArea{
     word-wrap: break-word;
 }
 .profile{
-    border:1px solid blue;
-    width: 100%;
-    height: 60px;
+    width: 97.2%;
     font-size: 30px;
-    background: #016aba;
+     background-color: rgb(92,142,224); 
     color: white;
+    text-align: left;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    position: relative;
 
-  
-
+}
+.profileImage-post{   
+    width: 50px;
+    height: 50px; 
+    display: inline-block;
+   
 }
 .postContant{
     
@@ -264,14 +269,30 @@ td{
     height: 500px;
     overflow: hidden;
     background-color: rgb(255, 255, 255);
-    padding-right: 300px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
     
 }
+.profileNames{
+        width: 100px;
+        margin-left:20px ;
+        display: inline;
+        position: absolute;
+        top:15px
+}
+.post-Image{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
 .CreatePost{
     
     width: 100%;
     height: 14%;
-
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-family: 'Open Sans', sans-serif;
 }
 .submitBox{
     width: 100px;
@@ -283,8 +304,11 @@ td{
     height:100px;
     position: absolute;
     display: flex; 
-    background-color: rgb(92,142,224);  
-    position: fixed; 
+     background-color: rgb(92,142,224);  
+     position: fixed; 
+     top: 0px;
+     left: 0px;
+     z-index: 100   ;
    
 }
 .profileImage{
@@ -347,10 +371,7 @@ td{
 
 }
 
-.option-HomePage{
-    /* border: 1px solid black;*/
-    
-}
+
 .optionBox-Yes{
     transform: scale(1);
 
@@ -403,6 +424,17 @@ td{
     color: white;
     padding-top: 20px;
 }
+.Submit-HomePage{
+    width: 100px;
+    box-shadow: 0px 0px 10px -1px rgba(64,64,64,1);
+    margin-top: 20px;
+    background-color: rgb(92,142,224);  
+    color: white;
+    cursor: pointer;
+}
+.Submit-HomePage:active{
+    color: tomato;
+}
 .logout-button{
     border-radius: 20px;
     height: 30px; 
@@ -414,6 +446,54 @@ td{
     background-color: tomato;
     margin-top: 20px;
     font-weight: bold;
+}
+.optionMore{
+    display: inline;
+    position: absolute;
+    left:650px;
+    cursor: pointer;
+}
+.optionComponent-true{
+    border:1px solid peru;
+    width: 100%;
+    height:100%;
+    margin:auto ;
+    position: absolute;  
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    z-index: 101;
+    position: fixed;
+    background-color: rgba(8, 8, 8,.4);
+    transform: scale(1);
+}
+.optionComponent-false{
+    transform: scale(0);
+    width: 0%;
+    height:0%;
+    
+}
+.options-post{
+    border:1px solid white;
+    width: 400px;
+    height:250px;
+    margin: auto;
+    margin-top: 350px;
+    background-color: white  ;
+}
+.MoreOption-boxes{
+    border:0.2px solid rgb(224, 219, 219);
+    width: 100%;
+    height: 55px;
+    padding-top: 25px;
+    font-size: 25px;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+    font-weight: bolder;
+    color: red;
+    cursor: pointer;
+}
+.MoreOption-boxes:active{
+    background-color: rgb(221, 216, 216);
 }
 .logintext{
     font-size:25px;
@@ -436,6 +516,7 @@ td{
     padding-top:50px ;
     font-size: 30px;
     padding-left:20px;
+  
     color:white;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
@@ -506,30 +587,51 @@ td{
     color: white;
     text-decoration: none;
 }
+/* .likesBox{  
+    width: 100%;
+    height: 50px;
+}
+
+.like-image{
+    width: 50px;
+    height: 50px;
+    background-size: contain ;
+    background-image: url(../image/like1.png);
+}
+.liked{ 
+    background-image: url(../image/like2.png);
+ 
+}
+.like-post:active{
+    transform: scale(0.5);
+} */
 .commentBox{
    background-color: white;
     width: 100%;
-   
-
-    
+    padding-top: 20px;
 }
 .commentInputBox{
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     width: 600px;
+    height: 40px;
     float: left;
-   
 }
 .commentHeading{
-
+    width: 60px;
+    height: 60px;
     display: block;
-    text-align: left;
-    font-size: 20px;
+    text-align: left;   
     font-weight: bolder;
     color: rgb(110, 106, 106);
+    background-image: url(../image/comment.png) ;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .CommentPostButton{
     border: 1px solid black;
+    height: 30px;
+    padding-top: 10px;
     font-weight: bold;
     font-size: 20px;
     padding-bottom:5px;

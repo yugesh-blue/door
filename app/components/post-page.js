@@ -4,13 +4,17 @@ import { inject as service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 
 export default class PostPageComponent extends Component {
-   
+    constructor(...args) {
+        super(...args);
+        console.log("yugesh")
+      }
     current=JSON.parse(localStorage.getItem("currentUser"))
     @tracked Datas=JSON.parse(localStorage.getItem("DoorUserPost"))
     @service router;
-
    @tracked optionBox="No"
-
+   @tracked optionMore=false;
+   @tracked currentMoreId=0;
+   @tracked likeButton="";   
    @action
    optionHomePageClick(){
        if(this.optionBox=="Yes"){
@@ -24,8 +28,8 @@ export default class PostPageComponent extends Component {
         post(){
            console.log(this.Datas,this.current)
           var i=this.textArea
-         // console.log(i)
-           
+          console.log(i)
+           if(i!="" && i!=undefined){
           var currentUser=this.current
          
            
@@ -48,13 +52,12 @@ export default class PostPageComponent extends Component {
             localStorage.setItem("notification",JSON.stringify("you posted new post"));
 
             this.router.transitionTo("notification");
-            
+        }  
         }
         @action
         delete(){
            
-           //console.log(event.target.id)
-            var currentId=event.target.id
+            var currentId=this.currentMoreId
             var localStorages=JSON.parse(localStorage.getItem("DoorUserPost"))
            //console.log(localStorages);
            for(var i=0;i<=localStorages.length-1;i++){
@@ -82,7 +85,7 @@ export default class PostPageComponent extends Component {
         }
         @action
         edit(){
-            let EditcurrentId=event.target.id
+            let EditcurrentId=this.currentMoreId
             localStorage.setItem("CurrentEdit",JSON.stringify(EditcurrentId));
             this.router.transitionTo("editBox")
             
@@ -128,8 +131,10 @@ export default class PostPageComponent extends Component {
   deletecomment(){
     //console.log(event.target.id.split("c")[0]);
     var id=event.target.id.split("t")[1]
+   
     //console.log(event.target.parentElement.previousElementSibling.previousElementSibling.id.slice(4,6))
     var id2=event.target.id.split("c")[0]
+    console.log(id,id2+"............................")
     //console.log(id2);
     var localStorages=JSON.parse(localStorage.getItem("DoorUserPost"))
     //console.log(localStorages[id2].PostComment,"....post")
@@ -163,6 +168,21 @@ export default class PostPageComponent extends Component {
                 }
             }
         }
+    }
+  }
+  @action
+  more(){
+      this.optionMore=!this.optionMore
+      this.currentMoreId=event.target.id.split("e")[1]
+        
+  }
+  @action
+  likeToggle(){
+    if(this.likeButton==""){
+        this.likeButton="liked"
+    }
+    else{
+        this.likeButton=""
     }
   }
    
