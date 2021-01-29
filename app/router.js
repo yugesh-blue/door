@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('login',{path:'/loginPage'});
   this.route('editBox');
   this.route('notification',{path:'/message'});
+  this.route('profile');
 });
 
 

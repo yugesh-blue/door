@@ -1,7 +1,7 @@
 <div class="optionComponent-{{this.optionMore}}">
     <div class="options-post">
         <div class="MoreOption-boxes" style="color: rgb(92,142,224);" {{on "click" this.edit}}>Edit</div>
-        <div class="MoreOption-boxes" style="color: rgb(92,142,224);" {{on "click" this.delete   }}>Delete</div>
+        <div class="MoreOption-boxes" style="color: rgb(92,142,224);" {{on "click" this.delete}}>Delete</div>
         <div class="MoreOption-boxes" {{on "click" this.more}}>Cancel</div>
     </div>
 </div>
@@ -15,6 +15,8 @@
                     <div  class="option-HomePage-Box">Profile</div>
                     <div  class="option-HomePage-Box">
                         <LinkTo @route="index"class="button-HomePage-Box" >Log Out</LinkTo>
+
+
                     </div>
                     
                  </div>
@@ -53,9 +55,14 @@
             <div class="postContant">
            {{{mess.UserPost}}}
             </div>
-            {{!-- <div class="likesBox">
-                    <div class="like-image {{this.likeButton}} like-post" {{on "click" this.likeToggle}} ></div>
-            </div> --}}
+            <div id="like{{mess.id}}" class="likesBox">
+                {{#if (like-button this.Datas this.current mess.id this.likeButton) }}
+                    <div class="like-image liked like-post" {{on "click" this.likeToggle}} ></div>
+                
+                {{else}}
+                     <div class="like-image like-post" {{on "click" this.likeToggle}} ></div>
+                {{/if}}
+            </div>
             <div class="commentBox">
                                <Input type="text" @value={{comment}} class="commentInputBox" placeholder="Comment"/>    
                                <div class="CommentPostButton"  id="post{{mess.id}}" {{on "click" this.CommentPost   }}>Post</div>

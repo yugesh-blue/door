@@ -142,6 +142,17 @@ td{
 .register-button{
   margin-left: -80px;
 }
+.nameError-true{
+    /* border: 1px solid black; */
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+
+}
+.nameError-false{
+    transform: scale(0);
+}
+
                                     /* login page style................... */
 .login-logo{
     width: 300px;
@@ -531,7 +542,6 @@ td{
     
 }
 .LoginInputBox::placeholder { 
-    color:black;
     opacity: 1;
   }
 .loginPage-Botton{
@@ -587,7 +597,7 @@ td{
     color: white;
     text-decoration: none;
 }
-/* .likesBox{  
+.likesBox{  
     width: 100%;
     height: 50px;
 }
@@ -604,7 +614,7 @@ td{
 }
 .like-post:active{
     transform: scale(0.5);
-} */
+}
 .commentBox{
    background-color: white;
     width: 100%;
