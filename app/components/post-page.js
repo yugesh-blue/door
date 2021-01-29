@@ -2,6 +2,7 @@ import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
+import likeButton from '../helpers/like-button';
 
 export default class PostPageComponent extends Component {
     constructor(...args) {
@@ -14,7 +15,7 @@ export default class PostPageComponent extends Component {
    @tracked optionBox="No"
    @tracked optionMore=false;
    @tracked currentMoreId=0;
-   @tracked likeButton="";   
+   @tracked likeButton=false;   
    @action
    optionHomePageClick(){
        if(this.optionBox=="Yes"){
@@ -42,7 +43,8 @@ export default class PostPageComponent extends Component {
                 UserId:currentUser,
                 UserPost:i,
                 id:num+1,
-                PostComment:[]
+                PostComment:[],
+                likedUsers:[]
 
             }
           
@@ -75,7 +77,7 @@ export default class PostPageComponent extends Component {
                         localStorage.setItem("DoorUserPost",JSON.stringify(localStorages));
                         localStorage.setItem("notification",JSON.stringify("you deleted a post"));
 
-                      //  this.router.transitionTo("notification");
+                       this.router.transitionTo("notification");
                     }
                 }
                 
@@ -86,6 +88,7 @@ export default class PostPageComponent extends Component {
         @action
         edit(){
             let EditcurrentId=this.currentMoreId
+            console.log(EditcurrentId)
             localStorage.setItem("CurrentEdit",JSON.stringify(EditcurrentId));
             this.router.transitionTo("editBox")
             
@@ -134,7 +137,7 @@ export default class PostPageComponent extends Component {
    
     //console.log(event.target.parentElement.previousElementSibling.previousElementSibling.id.slice(4,6))
     var id2=event.target.id.split("c")[0]
-    console.log(id,id2+"............................")
+
     //console.log(id2);
     var localStorages=JSON.parse(localStorage.getItem("DoorUserPost"))
     //console.log(localStorages[id2].PostComment,"....post")
@@ -178,12 +181,36 @@ export default class PostPageComponent extends Component {
   }
   @action
   likeToggle(){
-    if(this.likeButton==""){
-        this.likeButton="liked"
-    }
-    else{
-        this.likeButton=""
-    }
-  }
-   
+      this.likeButton=!this.likeButton
+      console.log("hi")
+      console.log(event.target.className.split(" ")[1])
+      let className=event.target.className.split(" ")[1]
+   console.log(event.target.parentElement.id.slice(4,5))
+    let id=event.target.parentElement.id.slice(4,5)
+        for (let i = 0; i < this.Datas.length; i++) {
+            if(this.Datas[i].id==id){
+                if(className!="liked"){
+                    this.Datas[i].likedUsers.push(this.current)
+                    localStorage.setItem("DoorUserPost",JSON.stringify(this.Datas))
+                    console.log(this.Datas)
+                    break 
+                }
+                else{
+                    console.log(this.Datas[i].likedUsers)
+                    for (let j = 0; j < this.Datas[i].likedUsers.length; j++) {
+                        if(this.Datas[i].likedUsers[j]==this.current){
+                            this.Datas[i].likedUsers.splice(j,1)
+                            console.log(this.Datas)
+                    localStorage.setItem("DoorUserPost",JSON.stringify(this.Datas))
+                            break
+                        }
+                        
+                    }
+                }
+            }
+            
+        }
+    
+
+  } 
 }

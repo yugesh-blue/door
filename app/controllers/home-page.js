@@ -7,20 +7,23 @@ export default class HomePageController extends Controller {
         UserId:"yugesh6",
       UserPost:"hello iam yugesh iam workinh in zoho",
       id:1,
-      PostComment:[]
+      PostComment:[],
+      likedUsers:[]
   }
   ,
   {
       UserId:"priya4",
       UserPost:"hello iam priya iam workinh in zoho",
       id:2,
-      PostComment:[]
+      PostComment:[],
+      likedUsers:[]
           },
    {
       UserId:"sudarsan6    ",
       UserPost:"hello iam sudarsan iam workinh in zoho",
       id:3,
-      PostComment:[]
+      PostComment:[],
+      likedUsers:[]
       } 
   ]
   

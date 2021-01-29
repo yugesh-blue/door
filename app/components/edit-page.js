@@ -10,7 +10,7 @@ export default Component.extend({
        
         console.log(currentUser)
       var localStorages=JSON.parse(localStorage.getItem("DoorUserPost"))
-          var currentId=currentUser.split("+").[1]
+          var currentId=currentUser;
           console.log(currentId)
            //console.log(event.target.id)
           //console.log(localStorages);

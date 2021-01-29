@@ -25,19 +25,22 @@
             <table class="register-table">
                 <tr>
                     <td><div class="detials">Name</div></td> 
-                     <td><Input type="text" @value={{Name}} class="inputBox" placeholder="Name"/></td>
+                     <td><Input type="text" @value={{Name}} {{on "keyup"  this.checkNames}} class="inputBox" autocomplete="off" placeholder="Name"/>
+                     <div class="nameError-{{checkName}}">the username is taken</div>
+                     </td>
+                     
                 </tr>
                 <tr>
                     <td>
-                         <div class="detials"> Email index  </div>
+                         <div class="detials"> Email</div>
                     </td>
                     <td>
-                    <Input type="text" @value={{email}} class="inputBox" placeholder="email"/>  
+                    <Input type="text" @value={{email}} class="inputBox" autocomplete="off"  placeholder="Email" autocomplete="off"/>  
                     </td>
                 </tr>
                 <tr>
                     <td>  <div class="detials"> Password</div></td>
-                    <td>  <Input type="password" @value={{pass}} class="inputBox" placeholder="pass"/></td>
+                    <td>  <Input type="password" @value={{pass}} class="inputBox" placeholder="Password"/></td>
                 </tr>
                 <tr>
                     <td>
@@ -50,5 +53,5 @@
                     
                 </tr>
             </table>
-             <LinkTo @route="index" {{on "click" name}} class="register-button"  >Register</LinkTo>
+             <div  {{on "click" name}} class="register-button"  >Register</div>
           </div>
