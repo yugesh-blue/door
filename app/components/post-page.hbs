@@ -7,7 +7,7 @@
 </div>
  <div class="userProfile">
         <div class='logo-Text'>Door</div>
-         <div class="profileImage" {{on "click" this.optionHomePageClick}}></div>
+         <img class="profileImage" src={{image-setting  this.current }} {{on "click" this.optionHomePageClick}}/>
         <div class="profileName"> {{@title.current}}</div>
         <div class="option-HomePage-full optionBox-{{this.optionBox}}">
             <div  class="optionFocus-HomePage"></div>
@@ -40,9 +40,10 @@
            
            <div class="profile">
                 <div class="profileImage-post">
-                    <img src="../image/profile.jpg" class="post-Image">
+                    <img  class="post-Image" src={{image-setting mess.UserId}}>
                 </div>
              <div class="profileNames"> {{mess.UserId}}</div> 
+             <div class="notification"></div>
                 {{#if (homepage-if this.current mess.UserId) }}
                 {{!-- <div class="editButton"id="edit+{{mess.id}}" {{on "click" this.edit}} disabled>Edit</div>
                 <div class="deleteButton"id="{{mess.id}}" {{on "click" this.delete   }}>Delete</div> --}}
@@ -56,21 +57,28 @@
            {{{mess.UserPost}}}
             </div>
             <div id="like{{mess.id}}" class="likesBox">
+                 
                 {{#if (like-button this.Datas this.current mess.id this.likeButton) }}
                     <div class="like-image liked like-post" {{on "click" this.likeToggle}} ></div>
                 
                 {{else}}
                      <div class="like-image like-post" {{on "click" this.likeToggle}} ></div>
                 {{/if}}
+                 <div class="likesCount">{{count-likes this.Datas  mess.id this.likeButton}} </div>
+              
             </div>
+            
             <div class="commentBox">
-                               <Input type="text" @value={{comment}} class="commentInputBox" placeholder="Comment"/>    
+                               <Input type="text" @value={{comment}} class="commentInputBox"  autocomplete="off" placeholder="Comment"/>    
                                <div class="CommentPostButton"  id="post{{mess.id}}" {{on "click" this.CommentPost   }}>Post</div>
                                 <div class="commentHeading"> </div>
                                    {{#each mess.PostComment as |messs|}}
                                 <div class="Comments">
+                                    <div class="commentBox-arrange">
+                                    <img class="profileImage-comment" src={{image-setting messs.name }}>
                                     <div class="userId-Comments">{{messs.name}}</div>
                                     <div class="commentDeleteButton" id="{{messs.mainId}}comment{{messs.id}}" {{on "click" this.deletecomment  }}>x</div>
+                                    </div>
                                     <div class="Commentposts">{{messs.commentPost}}</div>
                                     
                                 </div>

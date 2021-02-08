@@ -96,7 +96,7 @@
     width: 300px;
     height:300px;
     margin: auto;
-    background-image: url(../image/profile.jpg);
+    background-color: white;
     background-size: contain;
     background-repeat: no-repeat;
     margin-top: 100px;
@@ -228,7 +228,7 @@ td{
     background-size: contain;
 }
 .change-UserImage1{
-    background-image: url(../image/userImage1.png);
+    background-image: url(../image/userImage1.svg);
 
 }
 .change-UserImage0{
@@ -326,7 +326,6 @@ td{
     /* border: 1px solid red; */
     width: 50px;
     height:50px;
-    background-image: url(../image/profile.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     margin-top: 20px;
@@ -462,7 +461,10 @@ td{
     display: inline;
     position: absolute;
     left:650px;
+    top:0px;
     cursor: pointer;
+    font-size: 40px;
+
 }
 .optionComponent-true{
     border:1px solid peru;
@@ -598,8 +600,11 @@ td{
     text-decoration: none;
 }
 .likesBox{  
-    width: 100%;
+ 
+    width: 50px;
     height: 50px;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
 
 .like-image{
@@ -615,10 +620,28 @@ td{
 .like-post:active{
     transform: scale(0.5);
 }
+.likesCount{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+
+
+}
+.profileImage-comment{
+    border:1px solid black;
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    display: inline;
+    float: left;
+}
 .commentBox{
    background-color: white;
     width: 100%;
     padding-top: 20px;
+}
+.commentBox-arrange{
+    display: flex;
+    flex-direction: row;
 }
 .commentInputBox{
     text-align: center;
@@ -657,10 +680,12 @@ td{
     padding: 20px;
 }
 .Commentposts{
-   
+   padding-left: 10px;
+   padding-top: 10px;
     width: 100%;
     word-wrap: break-word;
     text-align: left;
+    
 }
 
 
@@ -671,10 +696,11 @@ td{
     font-family: 'Open Sans', sans-serif;
     color: blueviolet;
     text-align: left;
+    padding-top: 3px;
+    padding-left: 10px;
 }
 .commentDeleteButton{
-    float:right;
-    margin-top: -30px;
+    height: 30px;
     background-color: rgb(214, 75, 75);
     border-radius: 40px;
     font-size: 20px;
@@ -682,14 +708,16 @@ td{
     padding-right: 5px;
     cursor: pointer;
     color: white;
-} 
+    margin-left: 480px
+}
+
 .mainMessageBox{
     border: 1px solid black;
     width: 300px;
     height: 200px;
     margin: auto;
     margin-top: 300px;
-    
+    background-color: white;
 }
 .textArea{
     font-size: 30px;
@@ -715,4 +743,9 @@ td{
    background-image: url("../image/back.png");
    background-size: contain;
    
+}
+#sumaimage{
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
 }

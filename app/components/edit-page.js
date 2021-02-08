@@ -25,6 +25,10 @@ export default Component.extend({
                
           }
         this.set("val",Data)
+
+       
+
+       
     },
 
     @action
@@ -39,7 +43,7 @@ export default Component.extend({
        
         console.log(currentUser)
       var localStorages=JSON.parse(localStorage.getItem("DoorUserPost"))
-          var currentId=currentUser.split("+").[1]
+          var currentId=currentUser
           console.log(currentId)
            //console.log(event.target.id)
           //console.log(localStorages);
@@ -50,7 +54,7 @@ export default Component.extend({
                     localStorages[i].UserPost=this.val;
                     console.log(localStorages[i].UserPost)
                     localStorage.setItem("DoorUserPost",JSON.stringify(localStorages))
-                    localStorage.setItem("notification",JSON.stringify("you posted has been edited"));
+                    localStorage.setItem("notification",JSON.stringify("your posted has been edited"));
 
                      
                }

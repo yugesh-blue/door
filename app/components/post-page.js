@@ -10,12 +10,12 @@ export default class PostPageComponent extends Component {
         console.log("yugesh")
       }
     current=JSON.parse(localStorage.getItem("currentUser"))
-    @tracked Datas=JSON.parse(localStorage.getItem("DoorUserPost"))
+    @tracked Datas=JSON.parse(localStorage.getItem("DoorUserPost")) //userpost data
     @service router;
-   @tracked optionBox="No"
-   @tracked optionMore=false;
-   @tracked currentMoreId=0;
-   @tracked likeButton=false;   
+   @tracked optionBox="No" //logout and profile option trigger 
+   @tracked optionMore=false; //edit and delete option 
+   @tracked currentMoreId=0;    //getting id of the cliked post
+   @tracked likeButton=false;   //like button trigger
    @action
    optionHomePageClick(){
        if(this.optionBox=="Yes"){
@@ -36,9 +36,9 @@ export default class PostPageComponent extends Component {
            
           
            
-           var num=(this.Datas[this.Datas.length-1])? this.Datas[this.Datas.length-1].id:0;
+           var num=(this.Datas[this.Datas.length-1])? this.Datas[0].id:0;
            //console.log(num)
-        
+          
             var uppend={
                 UserId:currentUser,
                 UserPost:i,
@@ -48,7 +48,7 @@ export default class PostPageComponent extends Component {
 
             }
           
-            this.Datas.push(uppend)
+            this.Datas.unshift(uppend)
             //console.log(this.Datas+"......")
             localStorage.setItem("DoorUserPost",JSON.stringify(this.Datas));
             localStorage.setItem("notification",JSON.stringify("you posted new post"));
@@ -66,7 +66,7 @@ export default class PostPageComponent extends Component {
             //console.log(localStorages[i].id==currentId)
                     if(localStorages[i].id==currentId ){
                         if(this.current!="Admin"){
-                        if(localStorages[i].UserId==this.current){
+                        if(localStorages[i].UserId==this.current ){
                         localStorages.splice(i,1)  ;
                         localStorage.setItem("DoorUserPost",JSON.stringify(localStorages));
                         this.router.transitionTo("notification");
@@ -108,14 +108,14 @@ export default class PostPageComponent extends Component {
            if(this.comment!=null && this.comment!=undefined){
             for (let i = 0; i <=localStorages.length-1; i++) {
              if(localStorages[i].id==id){
-                 var num=(localStorages[i].PostComment.length!=0) ? localStorages[i].PostComment.length:0
+                 var num=(localStorages[i].PostComment.length!=0) ? localStorages[i].PostComment[0].id:0
                  var commentDatas={name:this.current,
                     commentPost:this.comment,
-                     id:num,
+                     id:num+1,
                     mainId:id
                     }
              // console.log("hjk");
-                localStorages[i].PostComment.push(commentDatas)
+                localStorages[i].PostComment.unshift(commentDatas)
                 localStorage.setItem("DoorUserPost",JSON.stringify(localStorages));
                 localStorage.setItem("notification",JSON.stringify("you commented on a post"));
 
@@ -176,6 +176,7 @@ export default class PostPageComponent extends Component {
   @action
   more(){
       this.optionMore=!this.optionMore
+        console.log(event.target)
       this.currentMoreId=event.target.id.split("e")[1]
         
   }

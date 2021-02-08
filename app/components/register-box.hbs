@@ -17,7 +17,7 @@
         </div> --}}
     <div class="MainBox box1">
          <div class="backButton" {{on "click" this.back     }} title="back"></div>
-        <div class="profileImage-regiterPage"></div>
+        <img class="profileImage-regiterPage" src={{this.blobimage}}/>
         <p >view your profile image here</p>
     </div>
     <div class="MainBox box2">
@@ -47,7 +47,7 @@
                             <div class="detials">Profile Image</div>
                     </td>
                     <td>
-                          <Input type="file" @value={{image}} class="inputBox" placeholder="choose image"/> 
+                          <Input type="file" @file={{image}} class="inputBox" {{ on "change" this.imageChange}} id="ko" placeholder="choose image"/> 
            
                     </td>
                     
