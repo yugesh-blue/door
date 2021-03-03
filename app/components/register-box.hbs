@@ -1,0 +1,59 @@
+
+    <div class="cropMainDiv {{this.cropToggle}}"{{on "mouseup"  this.mouseRealsed}}>
+        <canvas id="canvasCrop" style="display: none;" ></canvas>
+         <div class="canvasImgMain">
+        <div style=""  {{on "mousedown" this.mouseClicked}} {{on "mousemove"  this.mouseMove }} {{on "mouseup"  this.mouseRealsed}}  class="imgDiv ">
+
+           <img src="{{this.blobimage}}" style="width:{{this.width}}px; height:{{height}}px; margin-left:{{this.marginLeft}}px; margin-top:{{this.marginTop}}px;  "class="cropImage" {{on "mousemove"  this.mouseMove  }} {{on "mouseup"  this.mouseRealsed}} {{on "mousedown"  this.mouseClicked}}/>
+    
+               
+            <div class="outerCont">
+                <div class="innerCont centerAlign">
+                </div>
+            </div>
+            </div>
+        <div class="doneButton" {{on "click" this.doneCrop}}>Done</div>
+         </div>
+       
+    </div>
+    <div class="MainBox box1">
+         <div class="backButton" {{on "click" this.back     }} title="back"></div>
+        <img class="profileImage-regiterPage" src={{this.blobimage}}/>
+       
+        <p >view your profile image here</p>
+    </div>
+    <div class="MainBox box2">
+          <div class='Register-logo'></div>
+            <table class="register-table">
+                <tr>
+                    <td><div class="detials">Name</div></td> 
+                     <td><Input type="text" @value={{Name}} {{on "keyup"  this.checkNames}} class="inputBox" autocomplete="off" placeholder="Name"/>
+                     <div class="nameError-{{checkName}}">the username is taken</div>
+                     </td>
+                     
+                </tr>
+                <tr>
+                    <td>
+                         <div class="detials"> Email</div>
+                    </td>
+                    <td>
+                    <Input type="text" @value={{email}} class="inputBox" autocomplete="off"  placeholder="Email" autocomplete="off"/>  
+                    </td>
+                </tr>
+                <tr>
+                    <td>  <div class="detials"> Password</div></td>
+                    <td>  <Input type="password" @value={{pass}} class="inputBox" placeholder="Password"/></td>
+                </tr>
+                <tr>
+                    <td>
+                            <div class="detials">Profile Image</div>
+                    </td>
+                    <td>
+                          <Input type="file" @file={{image}} class="inputBox" {{ on "change" this.imageChange}} id="ko" placeholder="choose image"/> 
+           
+                    </td>
+                    
+                </tr>
+            </table>
+             <div  {{on "click" name}} class="register-button"  >Register</div>
+          </div>

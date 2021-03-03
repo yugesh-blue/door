@@ -1,0 +1,8 @@
+<div class=index-full-page>
+    <div class='logo' ></div>
+     <LinkTo @route="homePage"  class="login-button" {{on "click" (fn sayClick "guest")}} >Guest</LinkTo>
+     <LinkTo @route="register" class="login-button" >Register</LinkTo>
+     <p class="logintext">Already Registered</p>    
+          <LinkTo @route="login" class="login-button" >Login</LinkTo>
+</div>
+{{outlet}}

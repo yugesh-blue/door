@@ -1,0 +1,900 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);
+
+.index-full-page,.login-full-page,.mainDiv,.AdminmainDiv,.mainMessageDiv{
+    width: 100%;
+    height:960px;
+    margin:auto ;  
+    background-color: rgb(92,142,224); 
+    text-align: center;
+    /* background-color: rgb(92,142,224); */
+    /* background-image:url(../image/background.jpeg) ; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    
+  
+}
+.mainDiv{
+    background-color: white;
+}
+.login-full-page{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(92,142,224);
+}
+.login-button,.Submit-HomePage{
+    padding: 10px 30px 10px;
+    text-decoration: none;
+    background:white;
+    width: 5%;
+   text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: -30px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px;
+    
+}
+.login-button:active{
+    transform:scale(0.9)
+
+}
+
+                                    /* register pages style ..................*/
+
+.register-button,.MesageOk{
+    padding: 10px 30px 10px;
+    text-decoration: none;
+    color: #fff;
+    background: #016aba;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.9;
+    display: inline-block;
+    margin-left: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.register-detials{
+    border:1px solid black;
+    width: 750px;
+    height: 400px;
+    margin:auto;
+    box-shadow:1px 1px 10px 2px;
+    background-color: #d4fbff;
+}
+.register-fill-page{
+    
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(92,142,224);
+}
+.box1 > p{
+   font-size: 40px;
+   font-family: 'Open Sans', sans-serif;
+}
+.MainBox{
+   
+    width:50%;
+    height: 965px;
+    }
+    
+.box2{
+    background-color: white;
+}
+.profileImage-regiterPage{
+    width: 300px;
+    height:300px;
+    margin: auto;
+    background-color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 100px;
+}
+.logo,.Register-logo,.login-logo{
+    width: 200px;
+    height: 200px;
+    margin:auto;
+    background-image: url(../image/logo.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 200px;
+    box-shadow: -3px 2px 21px 1px 
+}
+.Register-logo{
+   margin-top: 150px;
+   margin-bottom: 20px;
+   width: 150px;
+   height: 150px;
+}
+.register-table{
+    /* border: 1px solid black;  */
+    margin: auto;
+}
+
+td{
+    font-family: 'Open Sans', sans-serif;
+
+    text-align: left;
+}
+.detials{
+    
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+}
+.inputBox{
+    margin-left: 150px;
+   font-size: 20px;
+   text-align: center;
+}
+.register-button{
+  margin-left: -80px;
+}
+.nameError-true{
+    /* border: 1px solid black; */
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+
+}
+.nameError-false{
+    transform: scale(0);
+}
+
+                                    /* login page style................... */
+.login-logo{
+    width: 300px;
+    margin-top: 200px;
+    
+}
+.login-box1 > p{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.Main-selectBox{
+    width:100%;
+    height:50px; 
+    margin: auto;
+    display: flex;
+    flex-direction: row ;
+    margin-top: 200px;
+}
+.selectBox{
+    
+    border-radius: 10px 10px 0px 0px;
+    padding-top: 15px;
+    background-color: rgb(214, 203, 203);
+    width: 200px;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: row; 
+    cursor: pointer;
+}
+.selectBox:active{
+    transform: scale(0.9);
+}
+.select-Box1{
+    margin-left: 180px;
+   
+}
+.changecolor1{
+    background-color: rgb(92,142,224);
+}
+.changecolor0{
+    background-color: white ;
+}
+.AdminImage{
+    width:70px;
+    height:70px;
+    margin-top: -15px;
+    background-image: url(../image/adminImage2.png);
+    background-size: contain;
+    
+}
+.select-Box2 >.text{
+    color: gray;
+}
+
+.change-AdminImage1{
+    background-image: url(../image/adminImage1.png);
+}
+.change-AdminImage0{
+    background-image: url(../image/adminImage2.png);
+}
+
+.userImage{
+    width:70px;
+    height:70px;
+    margin-top: -15px;
+    background-image: url(../image/userImage2.png);
+    background-size: contain;
+}
+.change-UserImage1{
+    background-image: url(../image/userImage1.svg);
+
+}
+.change-UserImage0{
+    background-image: url(../image/userImage2.png);
+
+}
+.selectBox > .text1{
+    color: black;
+}
+.selectBox > .text0{
+    color: gray;
+}
+                                                /* post box style ......................... */
+.mainPostBox{
+    width: 700px;
+    height: 900px;
+    margin: auto;
+}
+.postBox{
+    width: 700px;
+   border-bottom: 1px solid rgb(119, 113, 113);
+    margin-bottom: 80px;
+    box-shadow: -2px 2px 23px -2px rgba(105,98,98,0.83);
+}
+.postTextArea{
+    word-wrap: break-word;
+}
+.profile{
+    width: 97.2%;
+    font-size: 30px;
+     background-color: rgb(92,142,224); 
+    color: white;
+    text-align: left;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    position: relative;
+
+}
+.profileImage-post{   
+    width: 50px;
+    height: 50px; 
+    display: inline-block;
+   
+}
+.postContant{
+    
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    
+}
+.profileNames{
+        width: 100px;
+        margin-left:20px ;
+        display: inline;
+        position: absolute;
+        top:15px
+}
+.post-Image{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.CreatePost{
+    
+    width: 100%;
+    height: 14%;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-family: 'Open Sans', sans-serif;
+}
+.submitBox{
+    width: 100px;
+    height: 20px;
+
+}
+.userProfile{
+    width: 100%;
+    height:100px;
+    position: absolute;
+    display: flex; 
+     background-color: rgb(92,142,224);  
+     position: fixed; 
+     top: 0px;
+     left: 0px;
+     z-index: 100   ;
+   
+}
+.profileImage{
+    /* border: 1px solid red; */
+    width: 50px;
+    height:50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    margin-left: 60%;
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+
+.profileName,.logo-Text{
+     /* border: 1px solid red;  */
+    text-align:left;
+     padding: 15px;
+     margin-top: 10px; 
+     font-size: 25px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    
+}
+.option-HomePage-full{
+    width: 160px;
+    height:105px;
+    top: 85px;
+    left:-150px;
+    position: relative;
+    background-color: white;
+    box-shadow: 1px 2px 5px 1px rgba(59, 59, 59, 0.77);
+
+    
+}
+.option-HomePage-Box,.button-HomePage-Box{
+    border-bottom: 1px solid rgb(206, 204, 204); 
+    text-decoration: none;
+    color:rgb(70, 67, 67);
+    width: 160px;
+    height:40px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+  
+}
+.optionFocus-HomePage{
+    /* border: 1px solid rgb(149, 2, 2);  */
+    width: 20px;
+    height:20px;
+    margin-top: -8px;
+    margin-left: 25px;
+    transform: rotate(45deg);
+    background-color: white;
+
+
+}
+
+
+.optionBox-Yes{
+    transform: scale(1);
+
+}
+.optionBox-No{
+    transform: scale(0);
+}
+.logo-Text{
+    height: 25px;
+    margin-left: 2%;
+    border-radius: 20px;
+    background-color: white;
+    margin-top: 25px;
+    color: rgb(92,142,224);
+    padding:5px 5px 15px 5px;
+    font-weight: bolder;
+}
+
+.editButton,.deleteButton,.postDeleteButton{
+    margin-top: 5px;
+    width:60px;
+    font-size: 25px;
+   margin-left: 600px;
+   background-color:rgb(255, 107, 96);
+   cursor: pointer;
+   font-weight: bolder;
+    }
+    .editButton{
+        margin-top: -30px;
+    }
+.usersProfiles{
+    border: 1px solid red;
+    width:500px;
+    height: 896px;
+    position: absolute;
+    top:10px;
+    left: 1300px;
+    display: flex;
+    flex-direction: column;  
+    
+}
+.heading{
+    border: 1px solid red;
+    width:100%;
+    height: 50px; 
+    background-color:rgb(245, 124, 68);
+    display:inline;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    padding-top: 20px;
+}
+.Submit-HomePage{
+    width: 100px;
+    box-shadow: 0px 0px 10px -1px rgba(64,64,64,1);
+    margin-top: 20px;
+    background-color: rgb(92,142,224);  
+    color: white;
+    cursor: pointer;
+}
+.Submit-HomePage:active{
+    color: tomato;
+}
+.logout-button{
+    border-radius: 20px;
+    height: 30px; 
+    width: 70px;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    color:white;
+    background-color: tomato;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.optionMore{
+    display: inline;
+    position: absolute;
+    left:650px;
+    top:0px;
+    cursor: pointer;
+    font-size: 40px;
+
+}
+.optionComponent-true,.optionComponent-likedUsers-yes{
+    border:1px solid peru;
+    width: 100%;
+    height:100%;
+    margin:auto ;
+    position: absolute;  
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    z-index: 101;
+    position: fixed;
+    background-color: rgba(8, 8, 8,.4);
+    transform: scale(1);
+}
+.optionComponent-false{
+    transform: scale(0);
+    width: 0%;
+    height:0%;
+    
+}
+.options-post{
+    border:1px solid white;
+    width: 400px;
+    height:250px;
+    margin: auto;
+    margin-top: 350px;
+    background-color: white  ;
+}
+.options-likedUsers{
+    width: 400px;
+    height:500px;
+    margin: auto;
+    margin-top: 250px;  
+    border-radius: 20px;
+    background-color: rgb(92,142,224); 
+}
+.optionComponent-likedUsers-no{
+    width: 0%;
+    height:0%;
+    transform: scale(0);
+}
+.optionComponent-likedUsers-yes{
+    transform: scale(1);
+}
+.like-heading{
+    width: 99%;
+    height:50px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+    color: white;
+    font-weight: bolder;
+    
+}
+.AllLikedUsers{
+    border:1px solid black;
+    height:85%;
+    overflow-y: scroll;
+    background-color: white;
+}
+.closebutton{
+    float: right;
+    margin-top: -20px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.LikedUsers{
+    height:50px;
+    padding-top: 5px;
+    padding-left: 20px;
+
+}
+.likedUserId{
+    margin-left: 0px;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 60px;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+    font-weight: bolder;
+    text-align: left;
+    
+}
+.profileImage-like{
+    width: 44px!important;
+    height: 44px!important;
+    margin-left: 0px;
+}
+.MoreOption-boxes{
+    border:0.2px solid rgb(224, 219, 219);
+    width: 100%;
+    height: 55px;
+    padding-top: 25px;
+    font-size: 25px;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+    font-weight: bolder;
+    color: red;
+    cursor: pointer;
+}
+.MoreOption-boxes:active{
+    background-color: rgb(221, 216, 216);
+}
+.logintext{
+    font-size:25px;
+}
+.AdminuserProfile{
+    width: 900px;
+}
+
+.loginMainBox{
+        width:644px;
+        height: 300px;
+        margin: auto;
+        background-color: rgb(92,142,224);
+        margin-top: 20px;
+        margin-left: 180px;
+        border-radius: 0px 0px 20px 20px;
+}
+.Logindetials{
+  
+    padding-top:50px ;
+    font-size: 30px;
+    padding-left:20px;
+  
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+
+}
+.LoginInputBox{
+    margin-left: 60px;
+    font-size: 25px;    
+    text-align: center;
+    color: black ;
+ 
+    
+}
+.LoginInputBox::placeholder { 
+    opacity: 1;
+  }
+.loginPage-Botton{
+    padding-top: 5px;
+    width:200px;
+    height:50px;
+    margin: auto;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+
+}
+.loginPage-Botton:active{
+    transform: scale(0.9);
+}
+.UserId{
+    border: 1px solid black;
+    width:100%;
+    height:50px;
+    
+}
+.addUser{
+    border: 1px solid black;
+    color:black;
+    width:50px;
+    position: absolute;
+    top:25px;
+    left:87%;
+    background-color: white;
+    font-size: 19px;
+    text-decoration: none;
+}
+.selection{
+    width:250px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+
+}
+.OkButton{
+    border: 1px solid black;
+    width:100px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left:45px ;
+    padding-top:5px;
+    background-color: royalblue;
+    color: white;
+    text-decoration: none;
+}
+.likesBox{  
+ 
+    width: 50px;
+    height: 50px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.like-image{
+    width: 50px;
+    height: 50px;
+    background-size: contain ;
+    background-image: url(../image/like1.png);
+}
+.liked{ 
+    background-image: url(../image/like2.png);
+ 
+}
+.like-post:active{
+    transform: scale(0.5);
+}
+.likesCount{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+.profileImage-comment,.profileImage-like{
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    display: inline;
+    float: left;
+}
+.commentBox{
+   background-color: white;
+    width: 100%;
+    padding-top: 20px;
+}
+.commentBox-arrange{
+    display: flex;
+    flex-direction: row;
+}
+.commentInputBox{
+    text-align: center;
+    font-size: 25px;
+    width: 600px;
+    height: 40px;
+    float: left;
+}
+.commentHeading{
+    width: 60px;
+    height: 60px;
+    display: block;
+    text-align: left;   
+    font-weight: bolder;
+    color: rgb(110, 106, 106);
+    background-image: url(../image/comment.png) ;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.CommentPostButton{
+    border: 1px solid black;
+    height: 30px;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom:5px;
+    background-color: royalblue;
+    color: white;
+    cursor: pointer;
+}
+.Comments{
+    border: 1px solid rgb(180, 177, 177);
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px;
+}
+.Commentposts{
+   padding-left: 10px;
+   padding-top: 10px;
+    width: 100%;
+    word-wrap: break-word;
+    text-align: left;
+    
+}
+
+
+.userId-Comments{
+    
+    width: 100px;
+    height: 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: blueviolet;
+    text-align: left;
+    padding-top: 3px;
+    padding-left: 10px;
+}
+.commentDeleteButton{
+    height: 30px;
+    background-color: rgb(214, 75, 75);
+    border-radius: 40px;
+    font-size: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+    color: white;
+    margin-left: 480px
+}
+
+.mainMessageBox{
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    margin-top: 300px;
+    background-color: white;
+}
+.textArea{
+    font-size: 30px;
+    margin-top: 30px;
+}
+.MesageOk{
+    margin-top: 40px;
+    font-size: 20px;
+   padding: 10px 50px 10px;
+   margin-left: 2px; 
+   
+}
+.postDeleteButton{
+    border: 1px solid black;
+ display: inline;
+ margin-left: 20px;
+ font-family: 'Open Sans', sans-serif;
+ margin-left: -400px;
+}
+.backButton{
+    width: 60px;
+    height: 60px;
+   background-image: url("../image/back.png");
+   background-size: contain;
+   
+}
+#sumaimage{
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+}
+.cropMainDiv{
+    border: 1px solid black;
+    width: 99%;
+    height: 99%;
+    position: absolute;
+    background-color: rgba(64,64,64,0.5);
+    display: flex;
+    flex-direction: column;
+    transform: scale(0);
+    
+}
+.cropMainDivyes{
+
+    transform: scale(1);
+    z-index: 100;
+}
+.canvasImgMain{
+    width: 400px;
+    margin: auto;
+    margin-top: 0px;
+}
+.imgDiv{
+    background-color: white;
+    margin-top: 200px;
+    position: relative;;
+    overflow: hidden;
+}
+.doneButton{
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(34, 185, 100);
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 40px;
+    font-size: 25px;
+    padding-top:5px;
+    font-weight: bolder;
+    color:white;
+    margin: auto;
+
+}
+.cropImage{
+    width: 99%;
+    height: 99%;
+    left:   0px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+   
+}
+
+.outerCont{
+    height:400px;
+    width:400px;
+    position:relative;
+    overflow:hidden;
+    cursor: all-scroll;
+}   
+.innerCont{
+    background-color:transparent;
+    border:400px solid rgba(10, 10, 10, 0.6);
+    height:300px;
+    width:300px;
+    overflow:hidden;
+}
+.innerCont img{
+    position:absolute;
+    height:80%;
+    bottom:0;
+    left:50%;
+    -webkit-transform:translateX(-50%);
+    transform:translateX(-50%);
+}
+.centerAlign{
+    position:absolute;
+    left:50%; 
+    top:50%;
+    -webkit-transform:translateX(-50%) translateY(-50%);
+    transform:translateX(-50%) translateY(-50%);
+}
+#canvasCrop{
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+.image{
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+}

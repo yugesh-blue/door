@@ -1,0 +1,41 @@
+ {{!-- <div class="backButton" {{on "click" this.back     }} title="back"></div>
+    <div class='logo' ></div>
+     <div class="loginMainBox">
+             <div class="Logindetials"> Email Id
+                <Input type="text" @value={{emailId}} class="LoginInputBox" placeholder="Email or UserId"/>
+                </div>
+            <div class="Logindetials"> password
+                <Input type="password" @value={{password}} class="LoginInputBox" placeholder="Password"/>    
+            </div>
+            <div class="loginPage-Botton" {{on "click" login}}>Login</div>
+     </div> --}}
+
+      <div class="MainBox login-box1 ">
+          <div class="backButton" {{on "click" this.back     }} title="back"></div>
+          <div class="login-logo"></div>
+          <p>welcome back to the door  </p>
+      </div>
+       <div class="MainBox box2 login-box2">
+           <div class="Main-selectBox">
+           <div class="selectBox select-Box1 changecolor{{user}}" {{ on "click"(fn this.onChangeColor "User")}}>
+               <div class="userImage change-UserImage{{user}}" ></div>
+               <div class="text{{user}}">User</div></div>
+           <div class="selectBox select-Box2 changecolor{{Admin}}" {{ on "click"(fn this.onChangeColor "Admin")}}>
+               <div class="AdminImage change-AdminImage{{Admin}} "></div>
+               <div class="text{{Admin}}">Admin</div>
+               
+            </div>
+           </div>
+     <div class="loginMainBox">
+             <div class="Logindetials"> Email Id
+                <Input type="text" @value={{emailId}} class="LoginInputBox" placeholder="Email or UserId"/>
+                </div>
+            <div class="Logindetials"> password
+                <Input type="password" @value={{password}} class="LoginInputBox" placeholder="Password"/>    
+            </div>
+            <div class="loginPage-Botton" {{on "click" login}}>Login</div>
+     </div>
+           
+       </div>
+       
+{{yield}}
