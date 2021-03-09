@@ -478,10 +478,10 @@ td{
     z-index: 101;
     position: fixed;
     background-color: rgba(8, 8, 8,.4);
-    transform: scale(1);
+    display: inline-block;
 }
 .optionComponent-false{
-    transform: scale(0);
+    display: none;
     width: 0%;
     height:0%;
     
@@ -505,10 +505,10 @@ td{
 .optionComponent-likedUsers-no{
     width: 0%;
     height:0%;
-    transform: scale(0);
+    display: none;
 }
 .optionComponent-likedUsers-yes{
-    transform: scale(1);
+    display: inline-block;
 }
 .like-heading{
     width: 99%;
@@ -893,8 +893,49 @@ td{
     height: 200px;
     position: absolute;
 }
-.image{
-    border: 1px solid black;
+.image{  
+    border-radius: 30px;
     width: 50px;
     height: 50px;
+}
+/* profile css */
+.boxes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.ProfileBox1{
+    width: 50px;
+    height: 50px;   
+    margin-left: -1500px;
+    background-image: url("../image/home.png");
+    background-size: contain;
+    margin-top: 10px;
+    position: absolute;
+
+}
+.profilePic{
+    width: 200px;
+    height: 300px;
+
+}
+.profilePicImage    { 
+    border-radius: 50%;
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+
+}
+.profilePic>p{
+    font-size: 30px;
+   font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    margin-top:0px;
+    color:white;
+
+}
+.AllPostContainer{
+    margin-top: 50px;
 }
