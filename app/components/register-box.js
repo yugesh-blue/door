@@ -13,10 +13,6 @@ export default class RegisterBoxComponent extends Component {
     yugesh=this.name;
     @action
     name(){
-        console.log(this.Name)
-        console.log(this.email)
-        console.log(this.pass)
-        console.log(this.ImageFile)
           let files=this.ImageFile
           let imageType=files.type.split("/")[1]
          

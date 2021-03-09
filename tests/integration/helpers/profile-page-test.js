@@ -3,14 +3,14 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Helper | firebase', function(hooks) {
+module('Integration | Helper | profilePage', function(hooks) {
   setupRenderingTest(hooks);
 
   // TODO: Replace this with your real tests.
   test('it renders', async function(assert) {
     this.set('inputValue', '1234');
 
-    await render(hbs`{{firebase inputValue}}`);
+    await render(hbs`{{profile-page inputValue}}`);
 
     assert.equal(this.element.textContent.trim(), '1234');
   });

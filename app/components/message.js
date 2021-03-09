@@ -8,8 +8,6 @@ export default class MessageNotificationComponent extends Component {
     @service router;
     @action
     message(){
-       // if(this.current)
-       console.log(this.current )
        if(this.current=="Admin"){
                 this.router.transitionTo("admin")
        }
