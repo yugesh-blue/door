@@ -1,0 +1,31 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand ml-5" >
+    <img src="../image/door2.png" width="30" height="30" alt="">
+
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active" href="#">Features</a>
+      <a class="nav-item nav-link active" href="#">About</a>
+    </div>
+  </div>
+  <button class="btn btn-primary mr-5" {{on "click" this.Register}}>Sign Up
+          <i class="bi bi-arrow-right"></i>
+      </button>
+</nav>
+<div class="container index-Text " style="margin-top: 20px!important;">
+    <div class="display-2" >The Best Form of Expresstion </div>
+    <div class="display-2 text-monospace">Is</div>
+    <div class="display-2 text-monospace">Blogging </div>
+    
+</div>
+<div class="container mt-5">
+    <button type="button" class="btn-lg btn-success mr-5 " {{on "click" this.sayClick}}>Try As Guest</button>
+    <button type="button" class="btn-lg btn-success ml-5"  {{on "click" this.Login}}>Login</button>
+</div>
+{{yield}}

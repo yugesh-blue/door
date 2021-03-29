@@ -1,0 +1,70 @@
+{{!-- <div class="userProfile">
+    <div class='logo-Text'>Door</div>
+    <div class="searchBoxDiv">
+        <input type="text" placeholder="Search">
+    </div>
+    <div class="profileImage" {{on "click" this.optionHomePageClick}}>
+        <ImageSetting @user={{this.current}}></ImageSetting>
+    </div>
+    <div class="profileName"> {{this.current}}</div>
+    <div class="option-HomePage-full optionBox-{{this.optionBox}}">
+        <div class="optionFocus-HomePage"></div>
+        <div class="option-HomePage">
+            <div class="option-HomePage-Box" {{on "click" profilePageChange}}>Profile</div>
+            <div class="option-HomePage-Box">
+                <LinkTo @route="index" class="button-HomePage-Box">Log Out</LinkTo>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+ --}}
+
+<nav class="navbar navbar-expand-lg navbar-light d-flex  fixed-top navBar-color">
+  <div class="navbar-brand  px-2 ml-5  rounded-pill" >
+    <img src="../image/door.png" class="logo-img mt-n2 ml-3">
+    <span class="h3 text-white ">Door</span>
+  </div>
+  
+  
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarScroll">
+    <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+        <li class="nav-item active homeMargin">
+      </li>
+      <li class="nav-item active ml-n5 mt-1  " {{on "click" this.optionHomePageClick}}>
+        <div class="nav-link font-weight-bold text-white cursor" >Home <span class="sr-only">(current)</span></div>
+      </li>
+    
+     
+      <li class="nav-item dropdown">
+        <a class="navbar-brand mt-1" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+         <ImageSetting @className={{"profileImage-HomePage"}} @user={{this.current}}></ImageSetting>
+          
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+           <li><div class="container  font-weight-bold  text-secondary cursor"  {{on "click" profilePageChange}} >Profile</div></li>
+            <li><hr class="dropdown-divider"></li>
+          <li><div class="container font-weight-bold text-secondary cursor"  {{on "click" this.logout}}>LogOut</div></li>
+        </ul>
+      </li>
+      <li class="nav-item active form-inline ">
+        <div class="nav-link font-weight-bold ml-n3 text-white" href="#">{{this.current}}</div>
+      </li>
+    </ul>
+      <button class="btn btn-success mr-2 " {{on "click" this.CreatePost}}>Write a Post</button>
+    
+    <form class="d-flex">
+      <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success bg-light" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+{{yield}}                               
+

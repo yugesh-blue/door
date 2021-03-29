@@ -67,7 +67,7 @@ export default class PostsComponent extends Component {
             }
             @action
             CommentPost(){
-            
+            console.log(this.comment)
                 var currentId=event.target.id
                 var id=currentId.split("t")[1]
                 var localStorages=JSON.parse(localStorage.getItem("DoorUserPost"))

@@ -1,20 +1,22 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);
-
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap);
 .index-full-page,.login-full-page,.mainDiv,.AdminmainDiv,.mainMessageDiv{
     width: 100%;
-    height:960px;
-    margin:auto ;  
-    background-color: rgb(92,142,224); 
+    height:980px;
+    margin:auto ;   
     text-align: center;
     /* background-color: rgb(92,142,224); */
-    /* background-image:url(../image/background.jpeg) ; */
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     
   
+}
+.index-full-page{
+
+    background-image:url(../image/bg.jpg) ; 
 }
 .mainDiv{
     background-color: white;
@@ -22,13 +24,12 @@
 .login-full-page{
     display: flex;
     flex-direction: row;
-    background-color: rgb(92,142,224);
+    background-color: rgb(30,136,229);
 }
 .login-button,.Submit-HomePage{
     padding: 10px 30px 10px;
-    text-decoration: none;
     background:white;
-    width: 5%;
+    width: 11%;
    text-align: center;
     font-weight: bold;
     font-size: 25px;
@@ -36,10 +37,12 @@
     margin: auto;
     border-radius: 5px;
     box-shadow: 10px 10px 10px;
-    
+    text-decoration: none;
 }
 .login-button:active{
-    transform:scale(0.9)
+    transform:scale(0.9);
+    text-decoration: none;
+
 
 }
 
@@ -77,7 +80,7 @@
     height: 100%;
     margin: auto;
     text-align: center;
-    background-color: rgb(92,142,224);
+    background-color:  rgb(30,136,229);
 }
 .box1 > p{
    font-size: 40px;
@@ -196,7 +199,7 @@ td{
    
 }
 .changecolor1{
-    background-color: rgb(92,142,224);
+    background-color:  rgb(30,136,229);
 }
 .changecolor0{
     background-color: white ;
@@ -244,28 +247,34 @@ td{
                                                 /* post box style ......................... */
 .mainPostBox{
     width: 700px;
-    height: 900px;
+    height: 100%;
     margin: auto;
 }
 .postBox{
     width: 700px;
    border-bottom: 1px solid rgb(119, 113, 113);
-    margin-bottom: 80px;
+   margin-left: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
     box-shadow: -2px 2px 23px -2px rgba(105,98,98,0.83);
+    background-color: white;
+    border-radius: 10px;
 }
 .postTextArea{
     word-wrap: break-word;
 }
 .profile{
-    width: 97.2%;
-    font-size: 30px;
-     background-color: rgb(92,142,224); 
+    width: 100%;
+    font-size: 20px;
     color: white;
     text-align: left;
     padding: 10px;
+    padding-bottom: 0px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
     position: relative;
+    border-radius: 10px 10px 0px 0px;
+
 
 }
 .profileImage-post{   
@@ -277,19 +286,30 @@ td{
 .postContant{
     
     width: 100%;
-    height: 500px;
+    height: 50px;
     overflow: hidden;
     background-color: rgb(255, 255, 255);
-    font-family: 'Open Sans', sans-serif;
+    color: black;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
     font-weight: bolder;
+    text-align: left;
+    padding-left: 60px;
+    vertical-align: top;
     
+}
+.postContant:hover{
+    color: purple;
+    cursor: pointer;
 }
 .profileNames{
         width: 100px;
-        margin-left:20px ;
+        font-size: 18px;
         display: inline;
         position: absolute;
-        top:15px
+        top:15px;
+        font-family: 'Montserrat', sans-serif;
+        color:black;
 }
 .post-Image{
     width: 100%;
@@ -312,10 +332,10 @@ td{
 }
 .userProfile{
     width: 100%;
-    height:100px;
+    height:50px;
     position: absolute;
     display: flex; 
-     background-color: rgb(92,142,224);  
+     background-color:  rgb(30,136,229);  
      position: fixed; 
      top: 0px;
      left: 0px;
@@ -328,7 +348,6 @@ td{
     height:50px;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-top: 20px;
     margin-left: 60%;
     border-radius: 20px;
     cursor: pointer;
@@ -339,18 +358,19 @@ td{
      /* border: 1px solid red;  */
     text-align:left;
      padding: 15px;
-     margin-top: 10px; 
+     margin-top:-10px; 
      font-size: 25px;
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
-    
+    cursor: pointer;
+
 }
 .option-HomePage-full{
     width: 160px;
     height:105px;
-    top: 85px;
-    left:-150px;
+    top: 69px;
+    left:-155px;
     position: relative;
     background-color: white;
     box-shadow: 1px 2px 5px 1px rgba(59, 59, 59, 0.77);
@@ -367,17 +387,24 @@ td{
     font-size: 25px;
     font-family: 'Open Sans', sans-serif;
     cursor: pointer;
+    
   
 }
+.option-HomePage-Box:hover{
+    text-decoration: underline;
+}
 .optionFocus-HomePage{
-    /* border: 1px solid rgb(149, 2, 2);  */
+    
+    border-style: solid ;
+    border-color: rgb(209, 204, 204) white white rgb(209, 204, 204);
     width: 20px;
     height:20px;
-    margin-top: -8px;
+    margin-top: -13px;
     margin-left: 25px;
     transform: rotate(45deg);
     background-color: white;
 
+   
 
 }
 
@@ -390,13 +417,13 @@ td{
     transform: scale(0);
 }
 .logo-Text{
-    height: 25px;
+    height: 15px;
     margin-left: 2%;
     border-radius: 20px;
     background-color: white;
-    margin-top: 25px;
-    color: rgb(92,142,224);
-    padding:5px 5px 15px 5px;
+    margin-top: 5px;
+    color:  rgb(30,136,229);
+   padding:3px 5px 20px 5px;
     font-weight: bolder;
 }
 
@@ -438,7 +465,7 @@ td{
     width: 100px;
     box-shadow: 0px 0px 10px -1px rgba(64,64,64,1);
     margin-top: 20px;
-    background-color: rgb(92,142,224);  
+    background-color:  rgb(30,136,229);  
     color: white;
     cursor: pointer;
 }
@@ -500,7 +527,7 @@ td{
     margin: auto;
     margin-top: 250px;  
     border-radius: 20px;
-    background-color: rgb(92,142,224); 
+    background-color: rgb(30,136,229); 
 }
 .optionComponent-likedUsers-no{
     width: 0%;
@@ -578,7 +605,7 @@ td{
         width:644px;
         height: 300px;
         margin: auto;
-        background-color: rgb(92,142,224);
+        background-color:rgb(30,136,229);
         margin-top: 20px;
         margin-left: 180px;
         border-radius: 0px 0px 20px 20px;
@@ -660,17 +687,23 @@ td{
 }
 .likesBox{  
  
-    width: 50px;
-    height: 50px;
+    width: 500px;
+    height: 0px;
     padding-bottom: 10px;
     padding-left: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    
 }
 
 .like-image{
     width: 50px;
     height: 50px;
+    margin-left: 35px;
     background-size: contain ;
     background-image: url(../image/like1.png);
+    background-repeat: no-repeat;
 }
 .liked{ 
     background-image: url(../image/like2.png);
@@ -683,6 +716,10 @@ td{
     font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
     cursor: pointer;
+    width:100px;
+    font-size: 15px;
+    margin-left: -25px;
+    margin-top: 10px;
 
 }
 .profileImage-comment,.profileImage-like{
@@ -695,7 +732,9 @@ td{
 .commentBox{
    background-color: white;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 40px;
+    padding-left: 45px;
+    padding-right: 45px;
 }
 .commentBox-arrange{
     display: flex;
@@ -735,11 +774,14 @@ td{
     font-size: 20px;
     font-weight: bolder;
     font-family: 'Open Sans', sans-serif;
-    padding: 20px;
+    padding: 10px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    background-color: rgb(245, 243, 243);
+    border-radius:20px;
 }
 .Commentposts{
-   padding-left: 10px;
-   padding-top: 10px;
+   padding-left: 50px;
     width: 100%;
     word-wrap: break-word;
     text-align: left;
@@ -751,22 +793,23 @@ td{
     
     width: 100px;
     height: 30px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: blueviolet;
     text-align: left;
     padding-top: 3px;
     padding-left: 10px;
 }
 .commentDeleteButton{
-    height: 30px;
+    height: 20px;
     background-color: rgb(214, 75, 75);
     border-radius: 40px;
-    font-size: 20px;
+    font-size: 13px;
     padding-left: 5px;
     padding-right: 5px;
     cursor: pointer;
     color: white;
-    margin-left: 480px
+    margin-left: 450px;
+    x
 }
 
 .mainMessageBox{
@@ -859,18 +902,22 @@ td{
 }
 
 .outerCont{
+    border: 1px solid black;
     height:400px;
     width:400px;
     position:relative;
     overflow:hidden;
     cursor: all-scroll;
+
+    border:50px solid rgba(10, 10, 10, 0.6);
 }   
 .innerCont{
     background-color:transparent;
-    border:400px solid rgba(10, 10, 10, 0.6);
     height:300px;
     width:300px;
     overflow:hidden;
+
+   // background-color: black;
 }
 .innerCont img{
     position:absolute;
@@ -895,8 +942,8 @@ td{
 }
 .image{  
     border-radius: 30px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height:40px;
 }
 /* profile css */
 .boxes{
@@ -916,16 +963,22 @@ td{
 
 }
 .profilePic{
-    width: 200px;
+    width: 300px;
     height: 300px;
 
 }
+.ProfilePageBox1{
+    background-color: rgb(232, 240, 253);
+    margin-top: 45px;
+}
 .profilePicImage    { 
+    border: 5px double rgb(172, 167, 167);
     border-radius: 50%;
     margin-top: 20px;
     width: 200px;
     height: 200px;
     background-color: white;
+    margin-left:200px;
 
 }
 .profilePic>p{
@@ -933,9 +986,94 @@ td{
    font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
     margin-top:0px;
-    color:white;
+    color:black;
+
+    margin-left:270px;
 
 }
 .AllPostContainer{
     margin-top: 50px;
+    
+
+}
+
+.column{
+    width: 250px;
+    height: 100%;
+    margin-top: 42px;
+    position: fixed;
+    left: 0px;
+    background-color: rgb(243, 241, 237);
+}
+.fullpostBox{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.ColumnBoxes{
+    border: 0.5px solid rgb(219, 216, 216);
+    height: 35px;
+    padding-top: 5px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.ColumnBoxes:hover{
+    background-color: rgb(224, 223, 223);
+}
+.searchBox{
+    margin-left: 150px;
+    font-size: 10px;
+    text-align: center;
+}
+.searchBoxDiv{
+    width: 300px;
+    height: 40px;
+    margin-top: 9px;
+    margin-left: 150px;
+}
+.searchBoxDiv>input{
+    height:30px;
+    width: 300px;
+  border-radius: 20px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* after boosrap */
+.profileImage-HomePage{
+    width: 40px;
+    height: 40px;
+    margin-top: -10px;
+    margin-left: 20px;
+}
+.homeMargin{
+    margin-left: 140px;
+}
+.navBar-color {
+    background-color: rgb(30,136,229) !important;
+
+}
+.searchBox{
+    margin-left: 80px;
+}
+.listGroup{
+    margin-top: 59px;
+    height: 100%;
+}
+.cursor{
+    cursor: pointer;
+}
+.listItem:active{
+    color:#1e88e5;
+}
+.logo-img{
+width: 30px;
+height: 30px;
+}
+.index-Text{
+    font-weight: bolder;
 }

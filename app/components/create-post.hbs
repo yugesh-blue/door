@@ -1,0 +1,29 @@
+<div class="container-fluid bg-light" >
+    <!-- Just an image -->
+    <nav class="navbar navbar-light bg-light d-flex justify-content-around">
+        <a class="navbar-brand" >
+            <img src="../image/door2.png" width="30" height="30" alt="">
+            <span class="font-weight-bold mt-2 align-middle">Door</span>
+        </a>
+
+        <button class="btn btn-primary "  {{on "click" this.Cancel}} >x</button>
+    </nav>
+    <div class="container " style="width:800px" >
+        <div class="container border bg-white rounded-lg" style="height: 800px; width:800px;">
+            <div class="container  d-flex flex-column justify-content-center">
+                <Textarea class="display-4 border-0 pt-5 font-weight-bold " @value={{Heading}} style="outline:none"   cols="30" rows="0" placeholder="Enter the Heading Here "/>
+                 <div class="container border "></div>
+                <Textarea class="h4 border-0 pt-5 " style="outline:none" @value={{Textarea}} cols="30" rows="0" placeholder="Enter the Heading Here "/>
+
+            </div>
+
+
+        </div>
+        <button class="btn btn-primary mt-3 mb-5" {{on "click" this.post}}>publish</button>
+
+    </div>
+</div>
+
+
+{{yield}}
+

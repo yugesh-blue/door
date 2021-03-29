@@ -1,36 +1,16 @@
-
- <div class="userProfile">
-        <div class='logo-Text'>Door</div>
-        <div class="profileImage" {{on "click" this.optionHomePageClick}}>
-        <ImageSetting @user={{this.current}}></ImageSetting>
-        </div>
-        <div class="profileName"> {{@title.current}}</div>
-        <div class="option-HomePage-full optionBox-{{this.optionBox}}">
-            <div  class="optionFocus-HomePage"></div>
-            <div class="option-HomePage">
-                    <div  class="option-HomePage-Box" {{on "click" profilePageChange}}>Profile</div>
-                    <div  class="option-HomePage-Box">
-                        <LinkTo @route="index"class="button-HomePage-Box" >Log Out</LinkTo>
-
-
-                    </div>
-                    
-                 </div>
-            
-       
-        </div>  
-        
-
-       
-</div>
- <div class="mainPostBox">
-     <div class='CreatePost'>
-<Textarea @value={{textArea}}  cols="80" rows="4" placeholder="Type here to post"/>
-           <div  {{on "click" this.post}} class="Submit-HomePage"  >SUBMIT</div>
+<TaskBar></TaskBar>
+<div class="fullpostBox " >
+     <Column>   </Column>
+     <div class="container-fluid ml-5 pl-5" style="background-color: rgb(224, 224, 224);">
+     <div class="mainPostBox ">
+          <div class='CreatePost'>
+{{!-- <Textarea @value={{textArea}}  cols="80" rows="4" placeholder="Type here to post"/>
+           <div  {{on "click" this.post}} class="btn btn-primary"  >SUBMIT</div> --}}
        <Posts></Posts>    
     </div> 
-    
+    </div>
+    </div>
  </div>
-    
+
     
 {{yield}}

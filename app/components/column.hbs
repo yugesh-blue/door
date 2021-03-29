@@ -1,0 +1,33 @@
+{{!-- 
+        <div class="ColumnBoxes" {{on "click" this.home}}>Home</div>
+        <div class="ColumnBoxes">Trending</div>
+
+     </div> --}}
+<div class="col-md-3 col-xl-2 bd-sidebar bg-white         p-0 border listGroup position-fixed cursor">
+        <nav class="bd-link ">
+                <div
+                        class="list-group-item p-2 list-group-item-action  border-0 d-flex  align-items-center " {{on "click" this.home}}>
+                       <i class="bi bi-house-fill pr-3 pl-5"></i>
+                        Home </div>
+                <div
+                        class="list-group-item p-2 list-group-item-action  border-0 d-flex listItem">
+                       <i class="bi bi-megaphone-fill pr-3  pl-5 "></i>
+                        
+                        Tranding </div>
+                <div
+                        class="list-group-item p-2 list-group-item-action border-0 d-flex  align-items-center">
+                       <i class="bi bi-bell-fill pr-3  pl-5"></i>
+                       
+                        Notification
+                        <span class="badge badge-primary badge-pill ml-5">0</span>
+                </div>
+                <div 
+                        class="list-group-item p-2 list-group-item-action border-0 d-flex ">
+                       <i class="bi bi-gear-fill pr-3 pl-5"></i>
+                       
+                        Setting
+                </div>
+
+
+        </nav>
+</div>

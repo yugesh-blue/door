@@ -1,13 +1,14 @@
 <div class="mainDiv">
-    <div class="boxes " style="background-color: rgb(92,142,224); ">
-        <LinkTo  @route="homePage" class="ProfileBox1" placeholder="home"></LinkTo>
+    <TaskBar></TaskBar>
+    <Column></Column>
+    <div class="boxes ProfilePageBox1 ">
+         {{!-- <LinkTo  @route="homePage" class="ProfileBox1" placeholder="home"></LinkTo> --}}
         <div class="profilePic">
             <ImageSetting @className="profilePicImage" @user={{@model}}></ImageSetting>
-            
             <p>{{@model}}</p>
         </div>
     </div>
-    <div class="boxes">
+    <div class="boxes box2-profile" style="margin-left: 350px;">
 <Posts @page="profile"></Posts>
 
     </div>

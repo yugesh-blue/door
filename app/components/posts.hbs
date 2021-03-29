@@ -1,9 +1,9 @@
-<div class="optionComponent-{{this.optionMore}}">
-    <div class="options-post">
-        <div class="MoreOption-boxes" style="color: rgb(92,142,224);" {{on "click" this.edit}}>Edit</div>
-        <div class="MoreOption-boxes" style="color: rgb(92,142,224);" {{on "click" this.delete}}>Delete</div>
-        <div class="MoreOption-boxes" {{on "click" this.more}}>Cancel</div>
-    </div>
+<div class=" optionComponent-{{this.optionMore}}">
+    <div class="list-group options-post " style="width: 4   00px;height:150px;">
+  <button type="button" class="list-group-item list-group-item-action  list-group-item-light font-weight-bold" {{on "click" this.edit}}>Edit</button>
+  <button type="button" class="list-group-item list-group-item-action  list-group-item-light font-weight-bold" {{on "click" this.delete}}>Delete</button>
+  <button type="button" class="list-group-item list-group-item-action  list-group-item-danger font-weight-bold" {{on "click" this.more}}>Cancel</button>
+</div>
 </div>
  <div class="optionComponent-likedUsers-{{this.likeToggleUsers}}  ">
     <div class="options-likedUsers">
@@ -29,8 +29,7 @@
  {{#each this.loopingDivArray as |mess|}}
     {{#if (profile-page @page currentProfile mess.UserId) }}
         <div class="postBox" >
-           
-           <div class="profile">
+            <div class="profile">
                 <div class="profileImage-post" {{on "click" this.profileDetials}}>
         <ImageSetting @user={{mess.UserId}}></ImageSetting>
 
@@ -48,7 +47,7 @@
             <div class="postContant">
            {{{mess.UserPost}}}
             </div>
-            <div id="like{{mess.id}}" class="likesBox">
+            <div id="like{{mess.id}}" class="likesBox ">
                  
                 {{#if (like-button this.Datas this.current mess.id this.likeButton) }}
                     <div class="like-image liked like-post" {{on "click" this.likeToggle}} ></div>
@@ -59,11 +58,12 @@
                  <div class="likesCount" id={{mess.id}} {{on "click" this.likedUser}}>{{count-likes this.Datas  mess.id this.likeButton}} </div>
               
             </div>
-            
             <div class="commentBox">
-                               <Input type="text" @value={{comment}} class="commentInputBox"  autocomplete="off" placeholder="Comment"/>    
-                               <div class="CommentPostButton"  id="post{{mess.id}}" {{on "click" this.CommentPost   }}>Post</div>
-                                <div class="commentHeading"> </div>
+                   <Input class="form-control mr-sm-2" placeholder="comment" aria-label="Search"  @value={{comment}} />
+    <button class="btn btn-primary my-2 my-sm-0" id="post{{mess.id}}" {{on "click" this.CommentPost   }}type="submit">post</button>
+                               {{!-- <Input type="text"  class="commentInputBox"  autocomplete="off" placeholder="Comment"/>    
+                               <div class="CommentPostButton"  id="post{{mess.id}}" {{on "click" this.CommentPost   }}>Post</div> --}}
+                                
                                    {{#each mess.PostComment as |messs|}}
                                 <div class="Comments">
                                     <div class="commentBox-arrange">

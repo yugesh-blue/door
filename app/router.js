@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('editBox');
   this.route('notification',{path:'/message'});
   this.route('profile');
+  this.route('WritePost');
 });
 
 
